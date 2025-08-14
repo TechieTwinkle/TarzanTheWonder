@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logoreveal</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "poppins";
+        }
+        body{
+            background-color: #333;
+            
+        }
+
+        /* Splash Screen */
+
+        .intro{
+            position: fixed;
+            z-index: 1;
+            left: 0%;
+            top: 0%;
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            transition: 2s;
+        }
+
+        .logo-header{
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* color: #D9DCD6; */
+            color: white;
+        }
+
+        .logo{
+            position: relative;
+            font-style: italic;
+            font-size: 100px;
+            display: inline-block;
+            bottom: -20px;
+            opacity: 0;
+        }
+
+        .logo.active{
+            bottom: 0;
+            opacity: 1;
+            transition: ease-in-out .5s;
+        }
+
+        .logo.fade{
+            bottom: 150px;
+            opacity: 0;
+            transition: ease-in-out 1s;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="intro">
+        <h1 class="logo-header" >
+          
+          
+          <span class="logo"><img src="assets/carlogo.png" alt="" style="height: 100px; width: 150px; bottom: 25px; position: relative; top: 18px;"></span>
+          <span class="logo">Tar</span><span class="logo">Zan</span>
+          <br>
+        </h1>
+  </div>
+  <script>
+    let intro = document.querySelector('.intro')
+    let logo = document.querySelector('.logo-header')
+    let logoSpan = document.querySelectorAll('.logo')
+
+    
+    window.addEventListener('DOMContentLoaded',()=>{
+      setTimeout(()=>
+      {
+          logoSpan.forEach((span,idx) => 
+            {
+              setTimeout(()=>{
+                span.classList.add('active')
+            }, (idx+1)*500); // 700
+        });
+
+        setTimeout(()=>{
+          logoSpan.forEach((span,idx)=>
+            {
+              setTimeout(()=>{
+                span.classList.remove('active');
+                span.classList.add('fade');
+              }, (idx+1)*100) //700
+          })
+        },2400); //2700
+        setTimeout(() => {
+          intro.style.top= '-100vh'
+        },3000); //6100
+    })
+  })
+  </script>
+</body>
+</html>
