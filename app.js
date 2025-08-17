@@ -4,7 +4,8 @@ let logoSpan = document.querySelectorAll('.logo');
 
 
 
-window.addEventListener('DOMContentLoaded',()=>{
+window.addEventListener('DOMContentLoaded',()=>
+  {
     setTimeout(()=>
     {
         logoSpan.forEach((span,idx) => 

@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "poppins", sans-serif;
+    
     /* font-family: "Segoe UI", Arial, sans-serif; */
 }
 html{
@@ -103,6 +104,8 @@ header
     
 }
 
+    
+
 .content
 {
     text-align: center;
@@ -126,6 +129,7 @@ header
 
 .content a
 {
+    position: relative;
     font-size: 23px;
     color: #fff;
     text-decoration: none;
@@ -133,13 +137,33 @@ header
     padding: 10px 20px;
     border-radius: 50px;
     transition: 0.3s;
+    overflow: hidden;
+    display: inline-block;
+}
+.content a::after 
+{
+content: "";
+background-color: white;
+mix-blend-mode: difference;
+height: 100%;
+width: 0;
+position: absolute;
+top: 0;
+left: 0;
+border-radius: 50px;
+transition: 1s ease-in-out;
 }
 
-.content a:hover
+.content a:hover::after 
+{
+width: 100%;
+}
+
+/* .content a:hover
 {
     background-color: #fff;
     color: black;
-}
+} */
 
 .back-clip
 {
