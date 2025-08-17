@@ -4,10 +4,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "poppins", sans-serif;
+    /* font-family: "Segoe UI", Arial, sans-serif; */
+}
+html{
+    scroll-behavior: smooth;
 }
 body{
     background-color: #333;
-    
 }
 
 /* Splash Screen */
@@ -84,6 +87,9 @@ header
     font-weight: 300;
     margin-left: 2.5rem;
 }
+.navbar a:hover {
+        color: #aaaaaa;
+    }
 
 .video-cont
 {
@@ -93,12 +99,15 @@ header
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    
 }
 
 .content
 {
     text-align: center;
     user-select: none;
+    
 }
 
 .content h1

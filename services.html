@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TarZan - Our Services</title>
+  <link rel="icon" type="image/x-icon" href="assets/Stylized Monkey on Branch Logo.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "poppins", serif;
+      /* font-family: "Segoe UI", Arial, sans-serif; */
+    }
+
+    body {
+      background-color: #333;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+   header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(50px);
+    padding: 0.5rem 10%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    align-items: center;
+}
+
+.carlogo
+{
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar a
+{
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    margin-left: 2.5rem;
+}
+    .hero 
+    {
+      width: 100%;
+      height: 775px;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero img
+    {
+      width: 100%;
+      height: 120%;
+      background-size: cover;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+    .hero div
+    {
+      text-align: center;
+      user-select: none;
+      position: relative;
+      top: 345px;
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      color: #fff;
+    }
+
+    .services {
+      padding: 100px 10% 60px 10%;
+      text-align: center;
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
+
+    .services h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+    }
+
+    .service {
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+    }
+
+    .service h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .service p {
+      font-size: 1rem;
+      color: #d9d9d9;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+
+footer
+ {
+    width: 100%;
+    height: 400px;
+    /* background-color: black; */
+ }
+.footlogo
+{
+    width: 50%;
+    height: 400px;
+    background-color: #000;
+    
+}
+.footlogo a
+{
+    position: relative;
+    left: 56px;
+    top: 32px;
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    user-select: none;  
+    
+}
+.footlogo p
+{
+    position: relative;
+    left: 56px;
+    top: 32px;
+    color: white; 
+}
+
+.footother
+{
+    position: relative;
+    background-color: black;
+    width: 50%;
+    height: 400px;
+    bottom: 400px;
+    left: 50%;
+
+}
+
+.footother img
+{
+    height: 100px;
+    width: 100px;
+    position: relative;
+    left: 630px;
+    top: 8px;
+}
+.footother .pp  
+{
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    left: 600px;
+}
+a:hover {
+        color: #aaaaaa;
+    }
+
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+      }
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      footer {
+        flex-direction: column;
+        text-align: center;
+      }
+      .footer-right {
+        text-align: center;
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="#" class="carlogo">TarZan</a>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Our Models</a>
+      <a href="contactus.html">Contact Us</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="#" style="text-decoration: underline;">Our Services</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="https://images.pexels.com/photos/4489736/pexels-photo-4489736.jpeg" alt="">
+    <div>
+      <h1>Professional Car Care You Can Trust</h1>
+    </div>
+  </section>
+
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service">
+        <h3>Interior Detailing</h3>
+        <p>Every nook and cranny meticulously cleaned. From vacuuming and steam cleaning to leather conditioning, we make your car’s interior feel brand new.</p>
+      </div>
+
+      <div class="service">
+        <h3>Exterior Detailing</h3>
+        <p>Wash, wax, and polish for a flawless showroom shine. Your car will stand out on the road with our precision detailing service.</p>
+      </div>
+
+      <div class="service">
+        <h3>Paint Protection</h3>
+        <p>Preserve your car’s paint with high-quality protective coatings that shield against environmental damage and keep a glossy finish.</p>
+      </div>
+
+      <div class="service">
+        <h3>Headlight Restoration</h3>
+        <p>Remove haze and yellowing from headlights to restore clarity and improve nighttime driving safety.</p>
+      </div>
+
+      <div class="service">
+        <h3>Odor Elimination</h3>
+        <p>Say goodbye to unwanted odors. Our service neutralizes smells at the source, leaving your car smelling fresh and clean.</p>
+      </div>
+
+      <div class="service">
+        <h3>Leather Conditioning</h3>
+        <p>Moisturize and protect leather seats to prevent cracks and maintain a luxurious, elegant look.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer style="user-select: none;">
+    <div class="footlogo">
+      <a href="#">TarZan</a>
+      <br><br><br><br><br><br>
+      <p>123-456-8790</p>
+      <a top: 32px;color: white;" href="mailto:someone@something.com">tarzancars@tarzan.com</a>
+      <br><br><br>
+      <p>Address:- we are from somewhere on the map of not this world.</p>
+    </div>
+    
+    <div class="footother">
+      <a href="#"><img src="assets/Stylized Monkey on Branch Logo.png" alt=""></a>
+      <br><br><br><br>
+      <a class="pp" href="#">Privacy Policy</a>
+      <br>
+      <a class="pp" href="#" style="position: relative; left: 670px;">Blog</a>
+    </div>
+  </footer>
+
+
+
+</body>
+</html>
