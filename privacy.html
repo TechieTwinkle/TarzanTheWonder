@@ -18,10 +18,10 @@
         background-color: black;
         color: #FFFFFF;
         font-family: Arial, sans-serif;
-        line-height: 1.6;
+        /* line-height: 1.6; */
         margin: 0;
         padding: 0;
-        padding-top: 80px; /* Add space for fixed header */
+        /* padding-top: 80px; Add space for fixed header */
     }
     header
     {
@@ -34,7 +34,7 @@
         padding: 0.5rem 10%;
         display: flex;
         justify-content: space-between;
-        z-index: 1;
+        /* z-index: 1; */
         align-items: center;
     }
 
@@ -150,11 +150,44 @@
     left: 600px;
 }
 
+.hero 
+    {
+      width: 100%;
+      height: 785px;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero img
+    {
+      width: 100%;
+      height: 120%;
+      background-size: cover;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+    .hero div
+    {
+      text-align: center;
+      user-select: none;
+      position: relative;
+      top: 345px;
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      color: #fff;
+    }
   </style>
 </head>
 <body>
   <header>
     <a href="#" class="carlogo">TarZan</a>
+
+
     <nav class="navbar">
         <a href="index.html">Home</a>
         <a href="#">About Us</a>
@@ -165,7 +198,14 @@
     </nav>
   </header>
 
-  <div class="container">
+  <section class="hero">
+    <img src="https://images.unsplash.com/photo-1611697566379-1c3685ad3548?q=80&w=1174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+    <div>
+      <h1>Privacy Policy</h1>
+    </div>
+  </section>
+
+  <section class="container">
     <h1>Privacy Policy</h1>
 
     <h2>A legal disclaimer</h2>
@@ -207,7 +247,7 @@
       To learn more about this, check out our article 
       <a href="#">"Creating a Privacy Policy"</a>.
     </p>
-  </div>
+  </section>
 
   <footer style="user-select: none;">
     <div class="footlogo">
