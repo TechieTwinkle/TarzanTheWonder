@@ -68,8 +68,8 @@ header
     padding: 0.5rem 10%;
     display: flex;
     justify-content: space-between;
-    z-index: 1;
     align-items: center;
+    z-index: 1;
 }
 
 .carlogo
@@ -100,8 +100,6 @@ header
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
 }
 
     
@@ -173,13 +171,13 @@ width: 100%;
     z-index: -1;
 }
 
-.icons
+/* .icons
 {
     font-size: 2.8rem;
     color: #fff;
     cursor: pointer;
     display: none;
-}
+} */
 /* @media (min-aspect-ratio: 16/9) 
 {
     .back-clip{
@@ -349,3 +347,17 @@ width: 100%;
     background-image: url(https://static.wixstatic.com/media/11062b_8ed679c62e6f48a6b69a09f17f400a61~mv2.jpg/v1/fill/w_978,h_768,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_8ed679c62e6f48a6b69a09f17f400a61~mv2.jpg);
     background-size: cover;
 }
+.transition-overlay {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: black;
+      z-index: 9999;
+      transition: left 0.8s ease-in-out;
+    }
+
+    .transition-overlay.active {
+      left: 0;
+    }

@@ -181,3 +181,29 @@ option{
 }
 
  /* Overlay for transition */
+ /* Overlay */
+    .transition-overlay {
+      position: fixed;
+      top: 0;
+      left: -100%;  /* hidden by default */
+      width: 100%;
+      height: 100%;
+      background: black;
+      z-index: 9999;
+      transition: left 0.8s ease-in-out;
+    }
+
+    /* On page load (cover) */
+    .transition-overlay.start {
+      left: 0;
+    }
+
+    /* On link click (slide in) */
+    .transition-overlay.active {
+      left: 0;
+    }
+
+    /* When sliding out (after load) */
+    .transition-overlay.hide {
+      left: -100%;
+    }

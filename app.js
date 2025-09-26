@@ -30,3 +30,21 @@ window.addEventListener('DOMContentLoaded',()=>
   })
 })
 
+const overlay = document.querySelector(".transition-overlay");
+const links = document.querySelectorAll("a"); // all links and nav buttons
+
+links.forEach(link => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault(); // stop default navigation
+
+    const target = this.getAttribute("href"); // get link destination
+
+    // show overlay
+    overlay.classList.add("active");
+
+    // after animation, navigate
+    setTimeout(() => {
+      window.location.href = target;
+    }, 800); // must match CSS transition time
+  });
+});

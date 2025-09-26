@@ -114,5 +114,44 @@
       <br>
       <a class="pp" href="#" style="position: relative; left: 670px;">Blog</a>
     </div>
+    <!-- Place this at the end of your body -->
+<div class="transition-overlay start"></div>
+
+<script>
+  const overlay = document.querySelector(".transition-overlay");
+
+  // On page load: slide out overlay
+  window.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+      overlay.classList.remove("start");
+      overlay.classList.add("hide");
+    }, 500);
+  });
+
+  // Handle all clicks on links or buttons with data-target
+  document.addEventListener("click", (e) => {
+    const target = e.target;
+
+    // Check for <a> with href OR <button> with data-target
+    if ((target.tagName === "A" && target.href) || 
+        (target.tagName === "BUTTON" && target.dataset.target)) {
+      
+      e.preventDefault(); // prevent default navigation
+
+      // Show overlay
+      overlay.classList.remove("hide");
+      overlay.classList.add("active");
+
+      // Get destination URL
+      const url = target.tagName === "A" ? target.href : target.dataset.target;
+
+      // Navigate after transition
+      setTimeout(() => {
+        window.location.href = url;
+      }, 800); // match CSS transition
+    }
+  });
+</script>
+
 </body>
 </html>
